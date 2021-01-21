@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  text-align:center;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,2,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+img{
+   height: 300px;
+   width: 100%;
+}
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+.teamColumn {
+   float: left;
+   width: 33.3%;
+   margin-bottom: 16px;
+   padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+.teamColumn {
+   width: 100%;
+   display: block;
+}
+}
+.teamCard {
+   background-color: rgb(162, 162, 255);
+   text-align: center;
+   font-size: 20px;
+   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+   border-radius: 10px;
+}
+.teamCard:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.personContainer {
+   padding: 0 16px;
+}
+.personContainer::after, .teamContainer::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+.Designation {
+   color: rgb(15, 0, 100);
+   font-weight: bolder;
+   font-size: 40px;
+}
+.contact {
+   border: none;
+   outline: 0;
+   display: inline-block;
+   padding: 12px;
+   color: white;
+   font-weight: bolder;
+   background-color: rgb(78, 0, 102);
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+}
+.contact:hover {
+   background-color: #555;
+} 
+</style>
+</head>
+<body style="background-image:url(back.jpg)">
+<div style="text-align:left">
+  <button style="margin-top:20px;"><a href="sush.html" style="text-decoration: none;color:red;">home</a></button>
+</div>
+
+<h1 style="text-align: center;">Best Guide</h1>
+<div class="flip-card">
+  <div class="flip-card-inner" style="margin-left: 500px;">
+    <div class="flip-card-front">
+   <img src="adarshsir.jpg" alt="Avatar" style="width:300px;height:300px;"></a>
+    </div>
+ <a href="http://vtucnotes.blogspot.com/"  >   <div class="flip-card-back">
+    <p style="margin-top:100px;">   <h1>Adarsh Lakshetty</h1> 
+      <p>Assistent Professor</p> 
+      <p>BKEC College</p></p>
+    </div></a>
+  </div>
+</div>
+<h1 style="text-align: center;">Team Members</h1><div class="teamContainer" style="margin-left:250px;">
+<div class="teamColumn">
+<div class="teamCard">
+<img src="sushmita.jpeg" >
+<div class="personContainer">
+<h3>Sushmita</h3>
+<h4 style="color:brown;">VII Semester</h4>
+<h3>BKEC</h3>
+
+</div>
+</div>
+</div>
+<div class="teamColumn" style="margin-left:20px;">
+<div class="teamCard">
+<img src="nirmala.jpeg">
+<div class="personContainer">
+<h3>Nirmala</h3>
+<h4 style="color:brown;">VII Semester</h4>
+<h3>BKEC</h3>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
